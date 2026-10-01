@@ -1,0 +1,29 @@
+{
+  "name": "scalar-autodiff",
+  "version": "1.0.0",
+  "description": "小规模标量计算图的求值、前向/反向自动微分与梯度校验后端（TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "bin": {
+    "autodiff": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js serve",
+    "cli": "node dist/cli.js",
+    "test": "node --experimental-sqlite --test --import tsx/esm test/*.test.ts",
+    "test:build": "npm run build && node --experimental-sqlite --test dist-test/*.test.js",
+    "demo": "node --experimental-sqlite --import tsx/esm scripts/demo.ts"
+  },
+  "keywords": [
+    "autodiff",
+    "computation-graph",
+    "gradient",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0"
+  }
+}

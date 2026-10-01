@@ -1,0 +1,10 @@
+{
+  "name": "domain_demo",
+  "inputs": ["p"],
+  "constants": {},
+  "nodes": {
+    "neg": { "op": "sub", "a": "p", "b": "p" },
+    "ln": { "op": "log", "a": "neg" }
+  },
+  "outputs": ["ln"]
+}

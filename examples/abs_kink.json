@@ -1,0 +1,11 @@
+{
+  "name": "abs_demo",
+  "inputs": ["t"],
+  "constants": {},
+  "nodes": {
+    "z": { "op": "sub", "a": "t", "b": "t" },
+    "az": { "op": "abs", "a": "z" },
+    "w": { "op": "add", "a": "az", "b": "t" }
+  },
+  "outputs": ["w"]
+}

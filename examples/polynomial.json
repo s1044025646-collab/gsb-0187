@@ -1,0 +1,13 @@
+{
+  "name": "poly_shared",
+  "inputs": ["x", "y"],
+  "constants": { "three": 3, "two": 2 },
+  "nodes": {
+    "x2": { "op": "pow", "a": "x", "b": "two" },
+    "xy": { "op": "mul", "a": "x", "b": "y" },
+    "shared": { "op": "add", "a": "x2", "b": "xy" },
+    "f": { "op": "add", "a": "shared", "b": "three" },
+    "g": { "op": "mul", "a": "shared", "b": "y" }
+  },
+  "outputs": ["f", "g"]
+}

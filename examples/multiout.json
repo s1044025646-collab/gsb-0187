@@ -1,0 +1,17 @@
+{
+  "name": "nonlinear_multi",
+  "inputs": ["a", "b", "c"],
+  "constants": { "one": 1 },
+  "nodes": {
+    "ab": { "op": "mul", "a": "a", "b": "b" },
+    "s": { "op": "add", "a": "ab", "b": "c" },
+    "e": { "op": "exp", "a": "s" },
+    "l": { "op": "log", "a": "a" },
+    "trig": { "op": "sin", "a": "b" },
+    "tc": { "op": "cos", "a": "c" },
+    "u": { "op": "add", "a": "e", "b": "l" },
+    "v": { "op": "mul", "a": "trig", "b": "tc" },
+    "ratio": { "op": "div", "a": "u", "b": "v" }
+  },
+  "outputs": ["u", "v", "ratio"]
+}
