@@ -1,0 +1,18 @@
+{
+  "name": "autodiff-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "计算图自动微分与梯度校验后端（TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/server.js",
+    "cli": "node dist/src/cli.js",
+    "demo": "node dist/src/demo.js",
+    "test": "npm run build && node --test dist/test/autodiff.test.js dist/test/store.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.0",
+    "typescript": "^5.5.0"
+  }
+}
